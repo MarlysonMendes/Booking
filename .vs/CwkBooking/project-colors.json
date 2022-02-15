@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "84a8b9aa-05f3-4d54-96e8-d93b30485c03": {
+      "ProjectGuid": "84a8b9aa-05f3-4d54-96e8-d93b30485c03",
+      "DisplayName": "CwkBooking.Domain",
+      "ColorIndex": 0
+    },
+    "f6673b21-72b8-4117-aa9d-e4a85fb82720": {
+      "ProjectGuid": "f6673b21-72b8-4117-aa9d-e4a85fb82720",
+      "DisplayName": "CwkBooking.Dal",
+      "ColorIndex": 1
+    },
+    "d3d35df8-0700-4750-a383-d5e44938f610": {
+      "ProjectGuid": "d3d35df8-0700-4750-a383-d5e44938f610",
+      "DisplayName": "CwkBooking.Services",
+      "ColorIndex": 2
+    },
+    "cc497cc0-aab7-40a9-9cd0-a14a5952d6bd": {
+      "ProjectGuid": "cc497cc0-aab7-40a9-9cd0-a14a5952d6bd",
+      "DisplayName": "Cwk.Booking.Api",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}
