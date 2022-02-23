@@ -25,3 +25,5 @@ C:\Users\marly\Desktop\Projetos .NET\CwkBooking\Cwk.Booking.Api\obj\Debug\net6.0
 C:\Users\marly\Desktop\Projetos .NET\CwkBooking\Cwk.Booking.Api\obj\Debug\net6.0\ref\Cwk.Booking.Api.dll
 C:\Users\marly\Desktop\Projetos .NET\CwkBooking\Cwk.Booking.Api\obj\Debug\net6.0\Cwk.Booking.Api.pdb
 C:\Users\marly\Desktop\Projetos .NET\CwkBooking\Cwk.Booking.Api\obj\Debug\net6.0\Cwk.Booking.Api.genruntimeconfig.cache
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\Cwk.Booking.Api\bin\Debug\net6.0\CwkBooking.Domain.dll
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\Cwk.Booking.Api\bin\Debug\net6.0\CwkBooking.Domain.pdb
