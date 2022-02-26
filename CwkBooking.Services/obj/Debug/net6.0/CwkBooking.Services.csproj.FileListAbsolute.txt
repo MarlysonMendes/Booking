@@ -1,0 +1,12 @@
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Services\bin\Debug\net6.0\CwkBooking.Services.deps.json
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Services\bin\Debug\net6.0\CwkBooking.Services.dll
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Services\bin\Debug\net6.0\ref\CwkBooking.Services.dll
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Services\bin\Debug\net6.0\CwkBooking.Services.pdb
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Services\obj\Debug\net6.0\CwkBooking.Services.csproj.AssemblyReference.cache
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Services\obj\Debug\net6.0\CwkBooking.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Services\obj\Debug\net6.0\CwkBooking.Services.AssemblyInfoInputs.cache
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Services\obj\Debug\net6.0\CwkBooking.Services.AssemblyInfo.cs
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Services\obj\Debug\net6.0\CwkBooking.Services.csproj.CoreCompileInputs.cache
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Services\obj\Debug\net6.0\CwkBooking.Services.dll
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Services\obj\Debug\net6.0\ref\CwkBooking.Services.dll
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Services\obj\Debug\net6.0\CwkBooking.Services.pdb

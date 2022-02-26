@@ -1,0 +1,17 @@
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Dal\bin\Debug\net6.0\CwkBooking.Dal.deps.json
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Dal\bin\Debug\net6.0\CwkBooking.Dal.runtimeconfig.json
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Dal\bin\Debug\net6.0\CwkBooking.Dal.dll
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Dal\bin\Debug\net6.0\ref\CwkBooking.Dal.dll
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Dal\bin\Debug\net6.0\CwkBooking.Dal.pdb
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Dal\bin\Debug\net6.0\CwkBooking.Domain.dll
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Dal\bin\Debug\net6.0\CwkBooking.Domain.pdb
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Dal\obj\Debug\net6.0\CwkBooking.Dal.csproj.AssemblyReference.cache
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Dal\obj\Debug\net6.0\CwkBooking.Dal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Dal\obj\Debug\net6.0\CwkBooking.Dal.AssemblyInfoInputs.cache
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Dal\obj\Debug\net6.0\CwkBooking.Dal.AssemblyInfo.cs
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Dal\obj\Debug\net6.0\CwkBooking.Dal.csproj.CoreCompileInputs.cache
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Dal\obj\Debug\net6.0\CwkBooking.Dal.csproj.CopyComplete
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Dal\obj\Debug\net6.0\CwkBooking.Dal.dll
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Dal\obj\Debug\net6.0\ref\CwkBooking.Dal.dll
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Dal\obj\Debug\net6.0\CwkBooking.Dal.pdb
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Dal\obj\Debug\net6.0\CwkBooking.Dal.genruntimeconfig.cache
