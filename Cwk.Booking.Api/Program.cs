@@ -12,6 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<DataSource>();
+builder.Services.AddAutoMapper(typeof(Program));
 
 var cs = builder.Configuration.GetConnectionString("Default");
 builder.Services.AddDbContext<DataContext>( options =>
@@ -32,7 +33,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-app.UseDateTimeHeader();
+//app.UseDateTimeHeader();
 
 app.MapControllers();
 
