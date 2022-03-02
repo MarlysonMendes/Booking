@@ -1,6 +1,8 @@
 using CwkBooking.Api;
 using CwkBooking.Api.Middleware;
 using CwkBooking.Dal;
+using CwkBooking.Dal.Repositories;
+using CwkBooking.Domain.Abstractions.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +15,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<DataSource>();
 builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddScoped<IHotelsRepository,HotelRepository>();
 
 var cs = builder.Configuration.GetConnectionString("Default");
 builder.Services.AddDbContext<DataContext>( options =>
