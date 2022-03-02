@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CwkBooking.Dal.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220226144949_Initial")]
-    partial class Initial
+    [Migration("20220302064638_ModifyReservationAndRoom")]
+    partial class ModifyReservationAndRoom
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -68,20 +68,25 @@ namespace CwkBooking.Dal.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReservationId"), 1L, 1);
 
+                    b.Property<DateTime?>("CheckInDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("CheckoutDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Customer")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("EndDate")
-                        .HasColumnType("datetime2");
+                    b.Property<int>("HotelId")
+                        .HasColumnType("int");
 
                     b.Property<int>("RoomId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("StartDate")
-                        .HasColumnType("datetime2");
-
                     b.HasKey("ReservationId");
+
+                    b.HasIndex("HotelId");
 
                     b.HasIndex("RoomId");
 
@@ -96,7 +101,13 @@ namespace CwkBooking.Dal.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoomId"), 1L, 1);
 
-                    b.Property<int?>("HotelId")
+                    b.Property<DateTime?>("BusyFrom")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("BusyTo")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("HotelId")
                         .HasColumnType("int");
 
                     b.Property<bool>("NeedsRepair")
@@ -117,20 +128,32 @@ namespace CwkBooking.Dal.Migrations
 
             modelBuilder.Entity("CwkBooking.Domain.Models.Reservation", b =>
                 {
+                    b.HasOne("CwkBooking.Domain.Models.Hotel", "Hotel")
+                        .WithMany()
+                        .HasForeignKey("HotelId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("CwkBooking.Domain.Models.Room", "Room")
                         .WithMany()
                         .HasForeignKey("RoomId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("Hotel");
+
                     b.Navigation("Room");
                 });
 
             modelBuilder.Entity("CwkBooking.Domain.Models.Room", b =>
                 {
-                    b.HasOne("CwkBooking.Domain.Models.Hotel", null)
+                    b.HasOne("CwkBooking.Domain.Models.Hotel", "Hotel")
                         .WithMany("Rooms")
-                        .HasForeignKey("HotelId");
+                        .HasForeignKey("HotelId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Hotel");
                 });
 
             modelBuilder.Entity("CwkBooking.Domain.Models.Hotel", b =>
