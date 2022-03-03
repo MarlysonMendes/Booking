@@ -3,6 +3,8 @@ using CwkBooking.Api.Middleware;
 using CwkBooking.Dal;
 using CwkBooking.Dal.Repositories;
 using CwkBooking.Domain.Abstractions.Repositories;
+using CwkBooking.Domain.Abstractions.Services;
+using CwkBooking.Services.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +18,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<DataSource>();
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddScoped<IHotelsRepository,HotelRepository>();
+builder.Services.AddScoped<IReservationService, ReservationService>();
 
 var cs = builder.Configuration.GetConnectionString("Default");
 builder.Services.AddDbContext<DataContext>( options =>

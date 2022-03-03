@@ -19,5 +19,6 @@ namespace CwkBooking.Domain.Abstractions.Repositories
         Task<Room> CreateHotelRoomAsync(int hotelId, Room room);
         Task<Room> UpdateHotelRoomAsync(int hotelId, Room updatedRoom);
         Task<Room> DeleteHotelRoomAsync(int hotelId, int roomId);
+        Task GetHotelByAsync(int hotelId);
     }
 }

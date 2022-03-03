@@ -752,6 +752,20 @@
         "runtime": {
           "bin/placeholder/CwkBooking.Domain.dll": {}
         }
+      },
+      "CwkBooking.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CwkBooking.Dal": "1.0.0",
+          "CwkBooking.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CwkBooking.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CwkBooking.Services.dll": {}
+        }
       }
     }
   },
@@ -2136,6 +2150,11 @@
       "type": "project",
       "path": "../CwkBooking.Domain/CwkBooking.Domain.csproj",
       "msbuildProject": "../CwkBooking.Domain/CwkBooking.Domain.csproj"
+    },
+    "CwkBooking.Services/1.0.0": {
+      "type": "project",
+      "path": "../CwkBooking.Services/CwkBooking.Services.csproj",
+      "msbuildProject": "../CwkBooking.Services/CwkBooking.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2143,6 +2162,7 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 11.0.0",
       "CwkBooking.Dal >= 1.0.0",
       "CwkBooking.Domain >= 1.0.0",
+      "CwkBooking.Services >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.2",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.2",
@@ -2181,6 +2201,9 @@
             },
             "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Domain\\CwkBooking.Domain.csproj": {
               "projectPath": "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Domain\\CwkBooking.Domain.csproj"
+            },
+            "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Services\\CwkBooking.Services.csproj": {
+              "projectPath": "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Services\\CwkBooking.Services.csproj"
             }
           }
         }
