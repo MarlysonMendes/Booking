@@ -28,7 +28,9 @@ namespace CwkBooking.Api.Controllers
             if (result == null)
                 return BadRequest("Cannot create reservation");
 
-            return Ok(result);
+            var mapped = _mapper.Map<ReservationGetDto>(result);
+
+            return Ok(mapped);
         }
     }
 }

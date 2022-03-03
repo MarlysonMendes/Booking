@@ -2,6 +2,7 @@
 using CwkBooking.Domain.Abstractions.Repositories;
 using CwkBooking.Domain.Abstractions.Services;
 using CwkBooking.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,21 +31,21 @@ namespace CwkBooking.Services.Services
             //Step 2: Find the specified room
             var room = hotel.Rooms.Where(r => r.RoomId == reservation.RoomId).FirstOrDefault();
 
+            if (hotel == null || room == null) return null;
+
             //Step 3: Make sure the room is available
-            var roomBusyFrom = room.BusyFrom == null ? default(DateTime) : room.BusyFrom;
-            var roomBusyTo = room.BusyTo == null ? default(DateTime) : room.BusyTo;
-            var isBusy = reservation.CheckInDate >= room.BusyFrom.Value
-                || reservation.CheckInDate <= room.BusyTo.Value;
+            bool isBusy = await _ctx.Reservations.AnyAsync(r =>
+                (reservation.CheckInDate >= r.CheckInDate && reservation.CheckInDate <= r.CheckoutDate)
+                && (reservation.CheckoutDate >= r.CheckInDate && reservation.CheckoutDate <= r.CheckoutDate)
+            );
+
             if (isBusy)
                 return null;
             if (room.NeedsRepair)
                 return null;
 
-            //Step 4: Set busyfrom and busyto on the room
-            room.BusyFrom = reservation.CheckInDate;
-            room.BusyTo = reservation.CheckoutDate;
 
-            //Step 5: Persist all changes to the database
+            //Step 4: Persist all changes to the database
             _ctx.Rooms.Update(room);
             _ctx.Reservations.Add(reservation);
 
