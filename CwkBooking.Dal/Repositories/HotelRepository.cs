@@ -63,7 +63,7 @@ namespace CwkBooking.Dal.Repositories
             return await _ctx.Hotels.ToListAsync();
         }
 
-        public async Task<Hotel> GetHotelByIdAsync(int id)
+        public async Task<Hotel> GetHotelByIdAsync(int id)                         
         {
             var hotel = await _ctx.Hotels
                 .Include(h => h.Rooms)

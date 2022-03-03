@@ -9,7 +9,7 @@ namespace CwkBooking.Domain.Abstractions.Services
 {
     public interface IReservationService
     {
-        Task<Reservation> MakeReservation(int hotelId, int roomId, DateTime checkIn, DateTime checkout, string costumer);
+        Task<Reservation> MakeReservation(Reservation reservation);
         
     }
 }

@@ -65,3 +65,5 @@ C:\Users\marly\Desktop\Projetos .NET\CwkBooking\Cwk.Booking.Api\bin\Debug\net6.0
 C:\Users\marly\Desktop\Projetos .NET\CwkBooking\Cwk.Booking.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\marly\Desktop\Projetos .NET\CwkBooking\Cwk.Booking.Api\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\marly\Desktop\Projetos .NET\CwkBooking\Cwk.Booking.Api\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\Cwk.Booking.Api\bin\Debug\net6.0\CwkBooking.Services.dll
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\Cwk.Booking.Api\bin\Debug\net6.0\CwkBooking.Services.pdb

@@ -10,3 +10,8 @@ C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Services\obj\Debug\ne
 C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Services\obj\Debug\net6.0\CwkBooking.Services.dll
 C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Services\obj\Debug\net6.0\ref\CwkBooking.Services.dll
 C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Services\obj\Debug\net6.0\CwkBooking.Services.pdb
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Services\bin\Debug\net6.0\CwkBooking.Dal.dll
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Services\bin\Debug\net6.0\CwkBooking.Domain.dll
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Services\bin\Debug\net6.0\CwkBooking.Dal.pdb
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Services\bin\Debug\net6.0\CwkBooking.Domain.pdb
+C:\Users\marly\Desktop\Projetos .NET\CwkBooking\CwkBooking.Services\obj\Debug\net6.0\CwkBooking.Services.csproj.CopyComplete

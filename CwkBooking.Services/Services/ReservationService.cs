@@ -21,35 +21,30 @@ namespace CwkBooking.Services.Services
             _ctx = ctx;
         }
 
-        public async Task<Reservation> MakeReservation(int hotelId, int roomId, DateTime checkIn, DateTime checkout, string custumer)
+        public async Task<Reservation> MakeReservation(Reservation reservation)
         {
-            //Step 1: Create a reservation instance
-            var reservation = new Reservation
-            {
-                HotelId = hotelId,
-                RoomId = roomId,
-                CheckInDate = checkIn,
-                CheckoutDate = checkout,
-                Customer = custumer
-            };
-
-            //Step 2: Get the hotel, including all rooms
+            
+            //Step 1: Get the hotel, including all rooms
             var hotel = await _hotelRepository.GetHotelByIdAsync(reservation.HotelId);
 
-            //Step 3: Find the specified room
+            //Step 2: Find the specified room
             var room = hotel.Rooms.Where(r => r.RoomId == reservation.RoomId).FirstOrDefault();
 
-            //Step 4: Make sure the room is available
+            //Step 3: Make sure the room is available
+            var roomBusyFrom = room.BusyFrom == null ? default(DateTime) : room.BusyFrom;
+            var roomBusyTo = room.BusyTo == null ? default(DateTime) : room.BusyTo;
             var isBusy = reservation.CheckInDate >= room.BusyFrom.Value
-                && reservation.CheckInDate <= room.BusyTo.Value;
-            if (isBusy && room.NeedsRepair)
+                || reservation.CheckInDate <= room.BusyTo.Value;
+            if (isBusy)
+                return null;
+            if (room.NeedsRepair)
                 return null;
 
-            //Step 5: Set busyfrom and busyto on the room
+            //Step 4: Set busyfrom and busyto on the room
             room.BusyFrom = reservation.CheckInDate;
             room.BusyTo = reservation.CheckoutDate;
 
-            //Step 6: Persist all changes to the database
+            //Step 5: Persist all changes to the database
             _ctx.Rooms.Update(room);
             _ctx.Reservations.Add(reservation);
 
