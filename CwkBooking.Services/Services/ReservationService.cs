@@ -54,5 +54,30 @@ namespace CwkBooking.Services.Services
             return reservation;
             throw new NotImplementedException();
         }
+        public async Task<List<Reservation>> GetAllReservationsAsync()
+        {
+            return await _ctx.Reservations
+                .Include(r => r.Hotel)
+                .Include(r => r.Room)
+                .ToListAsync();
+        }
+        public async Task<Reservation> GetReservationByIdAsync(int id)
+        {
+            return await _ctx.Reservations
+                .Include(r => r.Hotel)
+                .Include(r => r.Room)
+                .FirstOrDefaultAsync(r => r.ReservationId == id);
+        }
+        public async Task<Reservation> DeleteReservationAsync(int id)
+        {
+            var reservation = await _ctx.Reservations.FirstOrDefaultAsync(r => r.ReservationId == id);
+
+            if (reservation != null)
+                _ctx.Reservations.Remove(reservation);
+
+            await _ctx.SaveChangesAsync();
+
+            return reservation;
+        }
     }
 }

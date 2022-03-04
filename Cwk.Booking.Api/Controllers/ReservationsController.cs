@@ -32,5 +32,36 @@ namespace CwkBooking.Api.Controllers
 
             return Ok(mapped);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllReservations()
+        {
+            var reservations = await _reservationsService.GetAllReservationsAsync();
+            var mapped = _mapper.Map<List<ReservationGetDto>>(reservations);
+
+            return Ok(mapped);
+        }
+
+        [HttpGet]
+        [Route("{reservationdId}")]
+        public async Task<IActionResult> GetReservationById(int reservationdId)
+        {
+            var reservation = await _reservationsService.GetReservationByIdAsync(reservationdId);
+            if (reservation == null)
+                return NotFound($"No reservation found for the id: {reservationdId}");
+
+            var mapped = _mapper.Map<ReservationGetDto>(reservation);
+            return Ok(mapped);
+        }
+
+        [HttpDelete]
+        [Route("{reservationId}")]
+        public async Task<IActionResult> CancelReservation(int reservationId)
+        {
+            var deleted = await _reservationsService.DeleteReservationAsync(reservationId);
+            if (deleted == null) return NotFound();
+
+            return NoContent();
+        }
     }
 }
