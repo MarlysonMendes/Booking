@@ -19,10 +19,12 @@ namespace CwkBooking.Api.Controllers
     {
         private readonly IMapper _mapper;
         private readonly IHotelsRepository _hotelsRepo;
-        public HotelsController(IHotelsRepository repo, DataContext ctx, IMapper mapper)
+        private readonly IRoomsRepository _roomsRepo;
+        public HotelsController(IHotelsRepository repoHotel, IRoomsRepository repoRoom, DataContext ctx, IMapper mapper)
         {
-            _hotelsRepo = repo;
+            _hotelsRepo = repoHotel;
             _mapper = mapper;
+            _roomsRepo = repoRoom;
         }
 
         [HttpGet]
@@ -88,7 +90,7 @@ namespace CwkBooking.Api.Controllers
         [Route("{hotelId}/rooms")]
         public async Task<IActionResult> GetAllHotelRooms(int hotelId)
         {
-            var rooms = await _hotelsRepo.ListHotelRoomsAsync(hotelId);
+            var rooms = await _roomsRepo.ListHotelRoomsAsync(hotelId);
             var mappedRooms = _mapper.Map<List<RoomGetDto>>(rooms);
 
             return Ok(mappedRooms);
@@ -98,7 +100,7 @@ namespace CwkBooking.Api.Controllers
         [Route("{hotelId}/rooms/{roomId}")]
         public async Task<IActionResult> GetHotelRoomById(int hotelId, int roomId)
         {
-            var room = await _hotelsRepo.GetHotelRoomByIdAsync(hotelId, roomId);
+            var room = await _roomsRepo.GetHotelRoomByIdAsync(hotelId, roomId);
 
             var mappedRoom = _mapper.Map<RoomGetDto>(room);
 
@@ -111,7 +113,7 @@ namespace CwkBooking.Api.Controllers
         {
             var room = _mapper.Map<Room>(newRoom);
 
-            await _hotelsRepo.CreateHotelRoomAsync(hotelId, room);
+            await _roomsRepo.CreateHotelRoomAsync(hotelId, room);
 
             var mappedRoom = _mapper.Map<RoomGetDto>(room);
 
@@ -128,7 +130,7 @@ namespace CwkBooking.Api.Controllers
             toUpdate.RoomId = roomId;
             toUpdate.HotelId = hotelId;
 
-            await _hotelsRepo.UpdateHotelRoomAsync(hotelId, toUpdate);
+            await _roomsRepo.UpdateHotelRoomAsync(hotelId, toUpdate);
 
             return NoContent();
         }
@@ -137,7 +139,7 @@ namespace CwkBooking.Api.Controllers
         [Route("{hotelId}/rooms/{roomId}")]
         public async Task<IActionResult> RemoveRoomFromHotel(int hotelId, int roomId)
         {
-            var room = await _hotelsRepo.DeleteHotelRoomAsync(hotelId, roomId);
+            var room = await _roomsRepo.DeleteHotelRoomAsync(hotelId, roomId);
 
             if (room == null)
                 return NotFound("Room not found");

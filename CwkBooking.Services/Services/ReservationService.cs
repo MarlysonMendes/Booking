@@ -15,11 +15,13 @@ namespace CwkBooking.Services.Services
     {
         private readonly IHotelsRepository _hotelRepository;
         private readonly DataContext _ctx;
+        private readonly IRoomsRepository _roomsRepository;
 
-        public ReservationService(IHotelsRepository hotelRepo, DataContext ctx)
+        public ReservationService(IHotelsRepository hotelRepo, IRoomsRepository roomRepo, DataContext ctx)
         {
             _hotelRepository = hotelRepo;
             _ctx = ctx;
+            _roomsRepository = roomRepo;
         }
 
         public async Task<Reservation> MakeReservation(Reservation reservation)
@@ -29,7 +31,7 @@ namespace CwkBooking.Services.Services
             var hotel = await _hotelRepository.GetHotelByIdAsync(reservation.HotelId);
 
             //Step 2: Find the specified room
-            var room = hotel.Rooms.Where(r => r.RoomId == reservation.RoomId).FirstOrDefault();
+            var room = await _roomsRepository.GetHotelRoomByIdAsync(reservation.HotelId, reservation.RoomId);
 
             if (hotel == null || room == null) return null;
 
@@ -46,7 +48,7 @@ namespace CwkBooking.Services.Services
 
 
             //Step 4: Persist all changes to the database
-            _ctx.Rooms.Update(room);
+            await _roomsRepository.UpdateHotelRoomAsync(reservation.HotelId, room);
             _ctx.Reservations.Add(reservation);
 
             await _ctx.SaveChangesAsync();
