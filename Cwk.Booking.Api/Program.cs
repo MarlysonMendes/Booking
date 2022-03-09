@@ -19,6 +19,7 @@ builder.Services.AddSingleton<DataSource>();
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddScoped<IHotelsRepository,HotelRepository>();
 builder.Services.AddScoped<IRoomsRepository, RoomRepository>();
+builder.Services.AddScoped<IReservationsRepository, ReservationRepository>();
 builder.Services.AddScoped<IReservationService, ReservationService>();
 
 var cs = builder.Configuration.GetConnectionString("Default");

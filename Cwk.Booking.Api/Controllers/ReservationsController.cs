@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using CwkBooking.Api.Dtos;
+using CwkBooking.Domain.Abstractions.Repositories;
 using CwkBooking.Domain.Abstractions.Services;
 using CwkBooking.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -13,10 +14,12 @@ namespace CwkBooking.Api.Controllers
     {
         private readonly IReservationService _reservationsService;
         private readonly IMapper _mapper;
-        public ResevationsController(IReservationService reservationService, IMapper mapper)
+        private readonly IReservationsRepository _reservationRepo;
+        public ResevationsController(IReservationService reservationService, IReservationsRepository ReservationRepo, IMapper mapper)
         {
             _reservationsService = reservationService;
             _mapper = mapper;
+            _reservationRepo = ReservationRepo;
         }
 
         [HttpPost]
@@ -36,7 +39,7 @@ namespace CwkBooking.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllReservations()
         {
-            var reservations = await _reservationsService.GetAllReservationsAsync();
+            var reservations = await _reservationRepo.GetAllReservationsAsync();
             var mapped = _mapper.Map<List<ReservationGetDto>>(reservations);
 
             return Ok(mapped);
@@ -46,7 +49,7 @@ namespace CwkBooking.Api.Controllers
         [Route("{reservationdId}")]
         public async Task<IActionResult> GetReservationById(int reservationdId)
         {
-            var reservation = await _reservationsService.GetReservationByIdAsync(reservationdId);
+            var reservation = await _reservationRepo.GetReservationByIdAsync(reservationdId);
             if (reservation == null)
                 return NotFound($"No reservation found for the id: {reservationdId}");
 
@@ -58,7 +61,7 @@ namespace CwkBooking.Api.Controllers
         [Route("{reservationId}")]
         public async Task<IActionResult> CancelReservation(int reservationId)
         {
-            var deleted = await _reservationsService.DeleteReservationAsync(reservationId);
+            var deleted = await _reservationRepo.DeleteReservationAsync(reservationId);
             if (deleted == null) return NotFound();
 
             return NoContent();

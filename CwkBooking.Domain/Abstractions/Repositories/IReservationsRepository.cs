@@ -11,5 +11,6 @@ namespace CwkBooking.Domain.Abstractions.Repositories
     {
         Task<List<Reservation>> GetAllReservationsAsync();
         Task<Reservation> GetReservationByIdAsync(int reservationId);
+        Task<Reservation> DeleteReservationAsync(int reservationId);
     }
 }
