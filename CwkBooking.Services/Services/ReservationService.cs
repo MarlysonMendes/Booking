@@ -54,7 +54,6 @@ namespace CwkBooking.Services.Services
             await _ctx.SaveChangesAsync();
 
             return reservation;
-            throw new NotImplementedException();
         }
     }
 }
