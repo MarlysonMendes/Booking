@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Dal\\CwkBooking.Dal.csproj": {
-                "projectPath": "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Dal\\CwkBooking.Dal.csproj"
+              "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Dal\\Cwk.Booking.Dal.csproj": {
+                "projectPath": "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Dal\\Cwk.Booking.Dal.csproj"
               },
               "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Domain\\CwkBooking.Domain.csproj": {
                 "projectPath": "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Domain\\CwkBooking.Domain.csproj"
@@ -95,12 +95,12 @@
         }
       }
     },
-    "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Dal\\CwkBooking.Dal.csproj": {
+    "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Dal\\Cwk.Booking.Dal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Dal\\CwkBooking.Dal.csproj",
-        "projectName": "CwkBooking.Dal",
-        "projectPath": "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Dal\\CwkBooking.Dal.csproj",
+        "projectUniqueName": "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Dal\\Cwk.Booking.Dal.csproj",
+        "projectName": "Cwk.Booking.Dal",
+        "projectPath": "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Dal\\Cwk.Booking.Dal.csproj",
         "packagesPath": "C:\\Users\\marly\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Dal\\obj\\",
         "projectStyle": "PackageReference",
@@ -247,8 +247,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Dal\\CwkBooking.Dal.csproj": {
-                "projectPath": "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Dal\\CwkBooking.Dal.csproj"
+              "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Dal\\Cwk.Booking.Dal.csproj": {
+                "projectPath": "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Dal\\Cwk.Booking.Dal.csproj"
               },
               "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Domain\\CwkBooking.Domain.csproj": {
                 "projectPath": "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Domain\\CwkBooking.Domain.csproj"

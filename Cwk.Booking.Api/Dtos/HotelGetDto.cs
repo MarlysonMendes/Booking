@@ -1,6 +1,6 @@
 ﻿namespace CwkBooking.Api.Dtos
 {
-    public class HotelGetDto
+    public record HotelGetDto
     {
         public int HotelId { get; set; }
         public string Name { get; set; }

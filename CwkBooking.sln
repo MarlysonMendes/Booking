@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CwkBooking.Domain", "CwkBooking.Domain\CwkBooking.Domain.csproj", "{84A8B9AA-05F3-4D54-96E8-D93B30485C03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CwkBooking.Domain", "CwkBooking.Domain\CwkBooking.Domain.csproj", "{84A8B9AA-05F3-4D54-96E8-D93B30485C03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CwkBooking.Dal", "CwkBooking.Dal\CwkBooking.Dal.csproj", "{F6673B21-72B8-4117-AA9D-E4A85FB82720}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cwk.Booking.Dal", "CwkBooking.Dal\Cwk.Booking.Dal.csproj", "{F6673B21-72B8-4117-AA9D-E4A85FB82720}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CwkBooking.Services", "CwkBooking.Services\CwkBooking.Services.csproj", "{D3D35DF8-0700-4750-A383-D5E44938F610}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CwkBooking.Services", "CwkBooking.Services\CwkBooking.Services.csproj", "{D3D35DF8-0700-4750-A383-D5E44938F610}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cwk.Booking.Api", "Cwk.Booking.Api\Cwk.Booking.Api.csproj", "{CC497CC0-AAB7-40A9-9CD0-A14A5952D6BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cwk.Booking.Api", "Cwk.Booking.Api\Cwk.Booking.Api.csproj", "{CC497CC0-AAB7-40A9-9CD0-A14A5952D6BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

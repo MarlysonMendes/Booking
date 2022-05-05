@@ -1,6 +1,6 @@
 ﻿namespace CwkBooking.Api.Dtos
 {
-    public class RoomPostPutDto
+    public record RoomPostPutDto
     {
         public int RoomNumber { get; set; }
         public double Surface { get; set; }

@@ -2,7 +2,7 @@
 
 namespace CwkBooking.Api.Dtos
 {
-    public class HotelCreateDto
+    public record HotelCreateDto
     {
         [Required]
         [StringLength(50)]

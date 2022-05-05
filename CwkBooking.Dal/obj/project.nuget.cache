@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TObJTRh3yGVjux45ZnrCE4uQwis9bM4yWz6+ZA4MAUGZLKKX4o9WeXorMkSWkXswR+AW1u3ydhfweRuxQTafDA==",
+  "dgSpecHash": "YkTlGtWwfULoYKgwgCb4OR/C6Jk/h8xoF2Ufw//H4aBUKQD7eIBuupx66Ayv2v/Yk7SANTxWxtiXxszo8IvcvQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Dal\\CwkBooking.Dal.csproj",
+  "projectFilePath": "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\CwkBooking.Dal\\Cwk.Booking.Dal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marly\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\marly\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
