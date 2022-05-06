@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "ccLPtr78RYLjhgqyczk9Ilw+AR430brkyXyHB76mvxWwKzek4q79683/3TgzC0IK62iHISLLplJp7kG/ZM9Myg==",
+  "dgSpecHash": "1qKDiCOeNMHc10b4hN6n4w/rYL4Ew5agEsskg9mgCgTISvt5x0ySupLiW+T9WgRJ8FVPnHfMMfwUOIw2irRhkA==",
   "success": true,
   "projectFilePath": "C:\\Users\\marly\\Desktop\\Projetos .NET\\CwkBooking\\Cwk.Booking.Api\\Cwk.Booking.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marly\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\marly\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\marly\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\marly\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
+    "C:\\Users\\marly\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\marly\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\10.0.1\\mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
     "C:\\Users\\marly\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\marly\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\marly\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
